@@ -1,0 +1,25 @@
+<mat-sidenav-container class="sidenav-container">
+
+      <!-- The Side Nav Content -->
+      <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset | async) ? 'dialog' : 'navigation'"
+            [mode]="(isHandset | async) ? 'over' : 'side'" [opened]="false">
+
+            <mat-toolbar>
+                  Menu
+            </mat-toolbar>
+
+            <mat-nav-list>
+                  <a mat-list-item routerLink="/">Home</a>
+                  <a mat-list-item routerLink="/login">Login</a>
+                  <a mat-list-item routerLink="/kanban">Kanban</a>
+                  <a mat-list-item routerLink="/customers">IDK YET</a>
+            </mat-nav-list>
+
+      </mat-sidenav>
+
+      <!-- The Main Nav Content -->
+      <mat-sidenav-content>
+
+            <ng-content></ng-content>
+
+      </mat-sidenav-content>
