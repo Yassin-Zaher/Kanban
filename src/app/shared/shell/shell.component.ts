@@ -9,7 +9,7 @@ import { map, Observable, shareReplay } from 'rxjs';
 })
 export class ShellComponent implements OnInit {
 
-  isHandSet: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset])
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset])
     .pipe(
       map(result => result.matches),
       shareReplay()
