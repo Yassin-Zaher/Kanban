@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { GoogleSigninDirective } from './login-page/google-signin.directive';
+import { GoogleSigninDirective } from './google-signin.directive';
+// Angular Material 
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
