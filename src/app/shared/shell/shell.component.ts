@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
-import { filter, map, Observable, shareReplay } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-shell',
@@ -13,14 +13,15 @@ export class ShellComponent implements OnInit {
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe([Breakpoints.XSmall])
+    .pipe(map(result => result.matches))
+
   ngOnInit(): void {
-    console.log(this.isHandset$);
+
 
   }
 
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe([Breakpoints.Handset])
-    .pipe(map(result => result.matches))
 
 
 
