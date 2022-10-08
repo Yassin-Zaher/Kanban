@@ -9,13 +9,15 @@ import { GoogleSigninDirective } from './google-signin.directive';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { SignupPageComponent } from './signup-page/signup-page.component';
 
 
 
 @NgModule({
   declarations: [
     LoginPageComponent,
-    GoogleSigninDirective
+    GoogleSigninDirective,
+    SignupPageComponent
   ],
   imports: [
     CommonModule,

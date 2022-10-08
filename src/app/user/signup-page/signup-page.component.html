@@ -1,9 +1,9 @@
 <main>
 
       <div *ngIf="true" class="loginContainer">
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
             <button appGoogleSignin mat-raised-button style="padding: 0.5rem; margin: 1rem;text-align: center;">
-                  <img style="width: 50px; height:30px" src="/assets/Google.svg" /> Login With Google
+                  <img style="width: 50px; height:30px" src="/assets/Google.svg" /> Sign Up With Google
             </button>
             <form class="example-form">
                   <mat-form-field class="example-full-width" appearance="fill">
@@ -15,10 +15,22 @@
                         <mat-label>Password</mat-label>
                         <input matInput placeholder="Enter your password.." type="password">
                   </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="Enter your password.." type="password">
+                  </mat-form-field>
             </form>
       </div>
 
 
+      <div *ngIf="false" class="logoutSection">
+            <p>
+                  Logged in as <strong>user name</strong>
+            </p>
+
+            <button mat-stroked-button>Logout</button>
+      </div>
 
 
 </main>
