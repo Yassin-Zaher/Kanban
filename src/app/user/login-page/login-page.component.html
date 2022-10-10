@@ -1,4 +1,4 @@
-<main>
+<main class="FormContainer">
 
       <!--Display The Login Form When The User Is Not Looged In-->
       <div *ngIf="!(auth.authState | async)" class="loginContainer">
@@ -21,11 +21,11 @@
 
       <!--Display The User Info When The User Looged In-->
       <div *ngIf="auth.authState | async as user" class="logoutSection">
-            <p>
+            <p class="text-3xl font-bold underline">
                   Logged in as <strong>{{ user.displayName}}</strong>
             </p>
 
-            <button mat-stroked-button (click)="auth.signOut()">Logout</button>
+            <button mat-raised-button (click)="auth.signOut()">Logout</button>
       </div>
 
 
