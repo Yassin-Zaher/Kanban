@@ -1,6 +1,7 @@
 <main>
 
-      <div *ngIf="true" class="loginContainer">
+      <!--Display The Login Form When The User Is Not Looged In-->
+      <div *ngIf="!(auth.authState | async)" class="loginContainer">
             <h1>Login</h1>
             <button appGoogleSignin mat-raised-button style="padding: 0.5rem; margin: 1rem;text-align: center;">
                   <img style="width: 50px; height:30px" src="/assets/Google.svg" /> Login With Google
@@ -16,6 +17,15 @@
                         <input matInput placeholder="Enter your password.." type="password">
                   </mat-form-field>
             </form>
+      </div>
+
+      <!--Display The User Info When The User Looged In-->
+      <div *ngIf="auth.authState | async as user" class="logoutSection">
+            <p>
+                  Logged in as <strong>{{ user.displayName}}</strong>
+            </p>
+
+            <button mat-stroked-button (click)="auth.signOut()">Logout</button>
       </div>
 
 

@@ -9,13 +9,17 @@ import firebase from 'firebase/compat/app';
 //This derective is for the Login with google button
 export class GoogleSigninDirective {
 
-  constructor(public auth: AngularFireAuth) { }
+  constructor(private auth: AngularFireAuth) { }
 
 
   @HostListener('click')
-  onLogin() {
+  onLoginWithGoogle() {
     this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
 
   }
 
 }
+
+
+
+

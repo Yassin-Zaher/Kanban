@@ -8,13 +8,13 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class LoginPageComponent implements OnInit {
 
+  private $loggedin: boolean = false;
+
   constructor(public auth: AngularFireAuth) { }
 
 
 
   ngOnInit(): void {
-    console.log(this.auth.authState);
-
 
   }
 
