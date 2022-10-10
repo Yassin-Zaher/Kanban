@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+//Components 
+import { ShellComponent } from './shell/shell.component';
+
+// Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { ShellComponent } from './shell/shell.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -13,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 const modules = [
@@ -30,6 +35,7 @@ const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatSnackBarModule
+
 ];
 
 @NgModule({
@@ -40,7 +46,9 @@ const modules = [
     ...modules
   ],
   exports: [
-    ShellComponent
+    ShellComponent,
+    ...modules
+
   ]
 })
 export class SharedModule { }

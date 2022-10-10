@@ -3,20 +3,16 @@
       <!--Display The Login Form When The User Is Not Looged In-->
       <div *ngIf="!(auth.authState | async)" class="loginContainer">
             <h1>Login</h1>
-            <button appGoogleSignin mat-raised-button style="padding: 0.5rem; margin: 1rem;text-align: center;">
-                  <img style="width: 50px; height:30px" src="/assets/Google.svg" /> Login With Google
+            <button appGoogleSignin mat-raised-button class="GoogleLoginBtn">
+                  <img style="width: 30px; height:30px;display:inline-block" src="/assets/Google.svg" /> Login With
+                  Google
             </button>
-            <form class="example-form">
-                  <mat-form-field class="example-full-width" appearance="fill">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="Enter your email.." type="email">
-                  </mat-form-field>
 
-                  <mat-form-field class="example-full-width" appearance="fill">
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Enter your password.." type="password">
-                  </mat-form-field>
-            </form>
+            <h5>OR</h5>
+
+            <!--The Form Container-->
+            <app-form></app-form>
+
       </div>
 
       <!--Display The User Info When The User Looged In-->

@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { GoogleSigninDirective } from './google-signin.directive';
-// Angular Material 
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { SignupPageComponent } from './signup-page/signup-page.component';
+
+
+import { FormComponent } from './form/form.component';
+
+
 
 
 
@@ -17,15 +21,13 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
   declarations: [
     LoginPageComponent,
     GoogleSigninDirective,
-    SignupPageComponent
+    FormComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
     SharedModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }

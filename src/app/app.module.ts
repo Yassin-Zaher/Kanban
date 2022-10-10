@@ -27,6 +27,7 @@ import { environment } from 'src/environments/environment';
     AngularFireAuthModule,
     AngularFirestoreModule
 
+
   ],
   providers: [],
   bootstrap: [AppComponent]
