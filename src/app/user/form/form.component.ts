@@ -22,11 +22,11 @@ export class FormComponent implements OnInit {
 
   }
 
-  form: FormGroup | undefined;
+  form: FormGroup | any;
   status = "login" || "signin" || "reset";
   isLoading = false;
 
-  serverResponde = '';
+  serverRespondeMsg: any;
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -73,8 +73,36 @@ export class FormComponent implements OnInit {
     }
   }
 
+  changeStatus(val: string) {
+    this.status = val
+  }
 
-  onUserSubmit() {
+
+  async onUserSubmit() {
+    this.isLoading = true;
+
+
+    const email = this.email?.value;
+    const password = this.password?.value;
+
+
+
+    try {
+      if (this.isUserLoggedIn) {
+        await this.auth.signInWithEmailAndPassword(email, password)
+      }
+      if (this.isUserSignup) {
+        await this.auth.createUserWithEmailAndPassword(email, password)
+      }
+
+      if (this.isPassResset) {
+        this.serverRespondeMsg = "Check your email"
+      }
+    } catch (err) {
+      this.serverRespondeMsg = err;
+    }
+
+    this.isLoading = false
 
   }
 

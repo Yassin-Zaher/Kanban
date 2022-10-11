@@ -4,6 +4,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 100%;
 }
 
 .form-title {
@@ -15,12 +16,15 @@
       min-width: 150px;
       max-width: 500px;
       width: 100%;
+      text-align: center;
 }
 
 .example-full-width {
-      width: 100%;
+      width: 94%;
+      margin: 0.8rem;
 }
 
-p {
-      font-family: Lato;
+
+form-field {
+      margin: 3rem;
 }

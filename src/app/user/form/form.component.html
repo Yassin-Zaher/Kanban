@@ -35,7 +35,7 @@
       <form class="example-form" [formGroup]="form" (ngSubmit)="onUserSubmit()">
 
             <!--The Email Input-->
-            <mat-form-field [color]="email.valid && 'accent'">
+            <mat-form-field [color]="email.valid && 'accent'" class="example-full-width" appearance="fill">
                   <input matInput FormControlName="email" placeholder="Enter your email.." type="email"
                         autocomplete="off" />
 
@@ -46,7 +46,8 @@
             </mat-form-field>
 
             <!--The Email Input-->
-            <mat-form-field [color]="email.valid && 'accent'" *ngIf="!isPasswordResset">
+            <mat-form-field [color]="email.valid && 'accent'" *ngIf="!isPassResset" class="example-full-width"
+                  appearance="fill">
 
                   <input matInput placeholder="Enter your password.." type="password" autocomplete="off" />
 
@@ -58,7 +59,8 @@
 
 
             <!--The Submit Button-->
-            <mat-form-field [color]="isPasswordMatch ? 'accent' : 'warn'" *ngIf="isUserSignup">
+            <mat-form-field [color]="isPasswordMatch ? 'accent' : 'warn'" *ngIf="isUserSignup"
+                  class="example-full-width" appearance="fill">
                   <input matInput FormControleName="passwordConfirmation" placeholder="Confirm password.."
                         type="password" autocomplete="off" />
 
@@ -66,16 +68,21 @@
                         Password does not match
                   </mat-error>
 
-                  <button mat-raised-button color="accent" type="submit"
-                        [disabled]="form.invalid || isPasswordMatch || loading">
-                        Submit
 
-                  </button>
 
 
             </mat-form-field>
+
+            <button mat-raised-button color="accent" type="submit"
+                  [disabled]="form.invalid || isPasswordMatch || isLoading">
+                  Submit
+
+            </button>
       </form>
 
-      <button *ngIf="isPassResset" mat-stroked-button type="submit" [disabled]="loading"> Send Reset Email </button>
+      <button *ngIf="isPassResset" mat-stroked-button type="submit" [disabled]="isLoading" class="example-full-width">
+            Send
+            Reset Email
+      </button>
 
 </mat-card>
