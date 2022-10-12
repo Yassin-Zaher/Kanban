@@ -6,19 +6,22 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { MatButtonToggle } from '@angular/material/button-toggle'
 import { MatDialogModule } from '@angular/material/dialog';
+import { BoardListComponent } from './board-list/board-list.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    BoardListComponent,
+    DialogComponent
+  ],
   imports: [
     CommonModule,
     KanbanRoutingModule,
     SharedModule,
     FormsModule,
     DragDropModule,
-    MatDialogModule,
-    MatButtonToggle
+    MatDialogModule
 
   ]
 })
