@@ -10,12 +10,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BoardListComponent } from './board-list/board-list.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { BoardComponent } from './board/board.component';
+import { BoardDialogComponent } from './dialogs/board-dialog.component';
 
 @NgModule({
   declarations: [
     BoardListComponent,
     DialogComponent,
-    BoardComponent
+    BoardComponent,
+    BoardDialogComponent
   ],
   imports: [
     CommonModule,
