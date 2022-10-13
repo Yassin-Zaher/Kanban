@@ -7,12 +7,11 @@
 }
 
 .example-list {
-      border: solid 1px #ccc;
       min-height: 60px;
-      background: white;
-      border-radius: 4px;
       overflow: hidden;
-      display: block;
+      display: flex;
+      justify-content: space-around;
+
 }
 
 .example-box {

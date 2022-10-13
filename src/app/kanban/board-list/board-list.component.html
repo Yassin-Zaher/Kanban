@@ -1,13 +1,12 @@
 <div class="borad-section-container">
 
-      <!--
-      <div class="example-container">
-            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]"
-                  class="example-list" (cdkDropListDropped)="drop($event)">
-                  <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
-            </div>
+
+      <div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+            <app-board></app-board>
+            <app-board></app-board>
+            <app-board></app-board>
       </div>
-      -->
+
 
       <div appearance="outline" class="add-board-container">
             <button mat-raised-button (click)="openDialog('0ms', '0ms')">add board</button>

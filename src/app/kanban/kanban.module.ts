@@ -9,11 +9,13 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BoardListComponent } from './board-list/board-list.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   declarations: [
     BoardListComponent,
-    DialogComponent
+    DialogComponent,
+    BoardComponent
   ],
   imports: [
     CommonModule,
