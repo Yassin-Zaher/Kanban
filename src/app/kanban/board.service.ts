@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { async } from '@firebase/util';
-import * as firebase from 'firebase/compat';
+import firebase from 'firebase/compat/app';
+import { environment } from 'src/environments/environment';
 import { switchMap } from 'rxjs';
 import { Board } from './board.model';
 
@@ -59,7 +59,7 @@ export class BoardService {
       .collection('board')
       .doc(boardId)
       .update({
-        tasks: firebase.default.firestore.FieldValue.arrayRemove(task)
+        tasks: firebase.firestore.FieldValue.arrayRemove(task)
       });
   }
 
@@ -83,7 +83,7 @@ export class BoardService {
 
 
   sortBoards(boards: Board[]) {
-    const db = firebase.default.firestore();
+    const db = firebase.firestore();
     const batch = db.batch();
     const refs = boards.map(board => db.collection('board').doc(board.id));
     refs.forEach((ref, index) => batch.update(ref, { priority: index }))

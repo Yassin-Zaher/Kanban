@@ -1,35 +1,52 @@
-.example-box {
-      width: 200px;
-      height: 200px;
+.outer-card {
+      margin: 10px;
+      min-width: 300px;
+      max-width: 300px;
       padding: 10px;
-      box-sizing: border-box;
-      color: #fff;
-      background-color: #212121;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 4px;
-      position: relative;
-      z-index: 1;
-      transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-            0 2px 2px 0 rgba(0, 0, 0, 0.14),
-            0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      background: #212121;
 }
 
-.example-box:active {
-      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-            0 8px 10px 1px rgba(0, 0, 0, 0.14),
-            0 3px 14px 2px rgba(0, 0, 0, 0.12);
+.inner-card {
+      margin: 5px 0;
+      cursor: pointer;
 }
 
-.example-handle {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      color: #ccc;
-      cursor: move;
-      width: 24px;
-      height: 24px;
+.cdk-drag-animating {
+      transition: transform 300ms ease;
+}
+
+.tasks.cdk-drop-list-dragging .cdk-drag {
+      transition: transform 300ms ease;
+}
+
+.cdk-drag-placeholder {
+      opacity: 0.5;
+}
+
+.blue {
+      background: #71deff;
+      color: black;
+}
+
+.green {
+      background: #36e9b6;
+      color: black;
+}
+
+.yellow {
+      background: #ffcf44;
+      color: black;
+}
+
+.purple {
+      background: #b15cff;
+}
+
+.red {
+      background: #e74a4a;
+}
+
+.gray {
+      background: gray;
+      text-decoration: line-through;
 }
