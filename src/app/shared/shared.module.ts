@@ -13,10 +13,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DeleteButtonComponent } from './delete-button/delete-button.component';
 
 
 
@@ -34,19 +36,22 @@ const modules = [
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatButtonToggleModule
 
 ];
 
+const components = [ShellComponent, DeleteButtonComponent]
+
 @NgModule({
   declarations: [
-    ShellComponent
+    ...components
   ],
   imports: [
     ...modules
   ],
   exports: [
-    ShellComponent,
+    ...components,
     ...modules
 
   ]
