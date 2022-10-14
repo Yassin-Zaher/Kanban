@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import firebase from 'firebase/compat/app';
-import { environment } from 'src/environments/environment';
 import { switchMap } from 'rxjs';
 import { Board } from './board.model';
 
@@ -24,10 +23,10 @@ export class BoardService {
 
   async createBoard(data: Board) {
     const user = await this.afAuth.currentUser;
-
-    return this.db.collection('board').add({
+    if (user === null) console.log("The Bug Is in the create Board")
+    return this.db.collection('boards').add({
       ...data,
-      uid: user?.uid,
+      uid: user!.uid,
       tasks: [{ description: "Hello", label: "yellow" }]
     })
   }

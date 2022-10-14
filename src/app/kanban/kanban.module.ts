@@ -8,14 +8,12 @@ import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BoardListComponent } from './board-list/board-list.component';
-import { DialogComponent } from './dialog/dialog.component';
 import { BoardComponent } from './board/board.component';
 import { BoardDialogComponent } from './dialogs/board-dialog.component';
 
 @NgModule({
   declarations: [
     BoardListComponent,
-    DialogComponent,
     BoardComponent,
     BoardDialogComponent
   ],
@@ -27,6 +25,8 @@ import { BoardDialogComponent } from './dialogs/board-dialog.component';
     DragDropModule,
     MatDialogModule
 
-  ]
+  ],
+  entryComponents: [BoardDialogComponent]
+
 })
 export class KanbanModule { }
