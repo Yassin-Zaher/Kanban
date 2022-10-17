@@ -22,8 +22,6 @@
       "es2020",
       "dom"
     ],
-    "noImplicitAny": false, // <-----
-    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
