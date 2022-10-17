@@ -11,4 +11,4 @@ What’s being worked on?
 Who’s working on what?    
 What progress the project is making?   
 
-### Comming Soon ...
+### Comming Soon ..
