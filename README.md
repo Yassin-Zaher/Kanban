@@ -1,6 +1,6 @@
 # Kanban v1.0
 This app is insipired by kanban 
-### what is Kanban
+### what is Kanban?
 Kanban is a lean method to manage and improve work across human systems. This approach aims to manage work by balancing demands with available capacity, and by improving the handling of system-level bottlenecks
 source(https://en.wikipedia.org/wiki/Kanban_(development))
 ### What is the Goal of this Application?
@@ -11,4 +11,5 @@ What’s being worked on?
 Who’s working on what?    
 What progress the project is making?   
 
-### Comming Soon ..
+### Comming Soon...
+built with angular and firebase
